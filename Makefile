@@ -17,7 +17,11 @@ NAME = scop
 SRC = 	src/main.c\
 		src/log_functions.c\
 		src/matrix_functions.c\
-		src/obj_parser.c
+		src/matrix_continued.c\
+		src/faces.c\
+		src/bmp_parser.c\
+		src/loaders.c\
+		src/vertices.c\
 
 OBJ = $(SRC:.c=.o)
 
@@ -34,7 +38,7 @@ INCLUDE = 	-I libft/  \
 all: $(NAME)
 
 $(NAME): $(OBJ)	
-	# @make -C libft 
+	@make -C libft 
 	@gcc -o $(NAME) $(OBJ)  $(CFLAGS)
 
 
